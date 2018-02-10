@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KohinoorTelugu.ttc">
+            <string>KohinoorTelugu-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diego-ph-222506" translatesAutoresizingMaskIntoConstraints="NO" id="BAp-yR-ey0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLB-oP-Ovf">
+                                <rect key="frame" x="225" y="517" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="XDR-mr-K7i"/>
+                                    <constraint firstAttribute="height" constant="150" id="ZsJ-Cb-mhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbR-H8-qaA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-Ut-1mq">
+                                <rect key="frame" x="0.0" y="517" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Khw-Ud-fiN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="xZD-bq-wr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yet-8y-rfv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm6-fE-tdg">
+                                <rect key="frame" x="160.5" y="263.5" width="54.5" height="140"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="100"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-aQ-duJ">
+                                <rect key="frame" x="275" y="85" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BfH-fn-19m"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ZSL-52-RSL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mdc-3E-g7b"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BAp-yR-ey0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6iL-FH-54W"/>
+                            <constraint firstItem="rdE-Ut-1mq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bky-cY-XfB"/>
+                            <constraint firstItem="Qm6-fE-tdg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gib-Cb-ZNw"/>
+                            <constraint firstItem="BAp-yR-ey0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IEY-eV-aL3"/>
+                            <constraint firstItem="wLB-oP-Ovf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IL2-Eg-S5O"/>
+                            <constraint firstItem="BAp-yR-ey0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NwQ-8w-B1a"/>
+                            <constraint firstItem="rdE-Ut-1mq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vcl-0w-meh"/>
+                            <constraint firstItem="wLB-oP-Ovf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="drD-ar-Nje"/>
+                            <constraint firstItem="fOZ-aQ-duJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="ech-3A-xxT"/>
+                            <constraint firstItem="BAp-yR-ey0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i5C-bR-Ht3"/>
+                            <constraint firstItem="Qm6-fE-tdg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfe-i2-15m"/>
+                            <constraint firstItem="fOZ-aQ-duJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xlW-73-qUq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelCounter" destination="Qm6-fE-tdg" id="Q04-5A-1ph"/>
+                        <outlet property="pauseButton" destination="wLB-oP-Ovf" id="CVw-I4-YAe"/>
+                        <outlet property="resetButton" destination="fOZ-aQ-duJ" id="fIs-2k-ye2"/>
+                        <outlet property="startButton" destination="rdE-Ut-1mq" id="hcI-zt-CDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diego-ph-222506" width="3456" height="5184"/>
+    </resources>
 </document>
